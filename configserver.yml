@@ -6,3 +6,10 @@ service:
   definition:
     metadata:
       uri: http://${spring.application.name}.${application.domain:cfapps.io}
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8001/eureka
+    eureka-server-port: 8001
+  instance:
+    hostname: localhost
